@@ -44,6 +44,10 @@ def main():
             # Delay to allow RVR to stream sensor data
             time.sleep(1)
 
+    # End loop/program with Ctrl+c, Ctrl+z or Delete
+    except KeyboardInterrupt:       
+        print('\n Program Terminated.')
+
     finally:
         rvr.sensor_control.clear()
 
