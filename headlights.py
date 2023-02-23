@@ -25,11 +25,19 @@ def ambient_light_handler(ambient_light_data):
     # Set the Headlight Brightness
     rvr.set_all_leds(
         led_group=RvrLedGroups.headlight_left.value,
-        led_brightness_values=[headlight_brightness, headlight_brightness, headlight_brightness]
+        led_brightness_values=[
+            headlight_brightness, 
+            headlight_brightness, 
+            headlight_brightness
+            ]
     )
     rvr.set_all_leds(
         led_group=RvrLedGroups.headlight_right.value,
-        led_brightness_values=[headlight_brightness, headlight_brightness, headlight_brightness]
+        led_brightness_values=[
+            headlight_brightness, 
+            headlight_brightness, 
+            headlight_brightness
+            ]
     )
 
 def main():
