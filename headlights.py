@@ -16,7 +16,7 @@ ambient_light_data = 0.0
 headlight_brightness = 0
 
 # Ambient Light Sensor Data Handler
-def scan(ambient_light_data):
+def sense(ambient_light_data):
     print('Ambient light sensor data response: ', ambient_light_data)
     
 # Calculate Headlight Brightness
@@ -52,7 +52,7 @@ def main():
         # Assign ambient light sensor to handler
         rvr.sensor_control.add_sensor_data_handler(
             service=RvrStreamingServices.ambient_light,
-            handler=scan
+            handler=sense
         )
 
         # Start reading sensor data @ 300ms intervals
